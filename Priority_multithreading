@@ -19,3 +19,10 @@ public class Main
 	
 	}
 }
+
+Output:
+Thread is runningThread [#15, Music thread, 1, main]
+Thread is runningThread [#16, Thread-1,5,main]
+Thread is runningThread [#16, Thread-1,5, main]
+Thread is runningThread [#17, Thread-2,5,main]
+Thread is runningThread [#17, Thread-2,5,main]
