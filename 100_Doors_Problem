@@ -1,0 +1,33 @@
+/*
+100 doors problem 
+There are 100 closed doors in a row. You walk past them 100 times.intial all doors are close 
+1st time: You open every door (1, 2, 3, 4...).like muliple of 1 . here it open all door
+2nd time: You open every 2nd door (2, 4, 6, 8...).like muliple of 2
+3rd time: You open every 3rd door (3, 6, 9, 12...).like muliple of 3
+(Continue this pattern...)
+100th time: You toggle only the 100th door.
+Question: After 100 passes, which doors are open?
+*/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+		int door=sc.nextInt();
+		for(int i=1;i*i<door;i++){
+		    System.out.println(i*i);
+		}
+	}
+}
+
+output:
+100
+1
+4
+9
+16
+25
+36
+49
+64
+81
