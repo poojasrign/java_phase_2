@@ -1,0 +1,34 @@
+/* Prime number Between Range */
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Starting Value :");
+		int start= sc.nextInt();
+		System.out.println("Ending Value :");
+ 		int end= sc.nextInt();
+ 		sc.close();
+ 		System.out.println("2");
+		for(int num=start;num<=end;num++) {
+			int count=0;
+			for (int i=1;i<=num;i+=2) {   // using i+=2 we can avoid all even number because all even 
+				if(num%i==0) {            // except 2 are not prime number 
+					count++;
+				}
+			}
+			if(count==2) {
+				System.out.println(num);
+			}
+		}
+	}
+}
+
+OutPut:
+Starting Value :
+2
+Ending Value :
+5
+2
+3
+5
