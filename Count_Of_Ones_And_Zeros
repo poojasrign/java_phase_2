@@ -1,0 +1,23 @@
+/* Find the count of Zeros and Ones */
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        long n= sc.nextInt();
+        int ones = 0;
+        int zeros = 0;
+        while (n > 0 ) {
+            if(n%10==1) ones++;
+            else zeros++;
+            n/=10;
+        }
+        System.out.println("Ones count : "+ones);
+        System.out.println("Zeros count: "+zeros);
+	}
+}
+
+Output:
+10101010
+Ones count : 4
+Zeros count: 4
