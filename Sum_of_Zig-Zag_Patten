@@ -1,0 +1,59 @@
+/*
+1. Sum of Zig-Zag
+Ravi is not able to figure out the method to calculate the sum of the Zig-Zag pattern in the Matrix. 
+Can you help Ravi to write a program to find the sum of Zig-Zag patterns in a given matrix?
+Input Format
+Input consists of 2 integers and 1 2D array.
+Integers corresponding to the size of rows and columns.
+Output Format
+The output prints the sum of the zig-zag pattern.
+Refer to the sample output.
+Note: Size of row and column should be same
+Sample Input:
+3
+3
+1 2 3
+4 5 6
+7 8 9
+Sample Output:
+Sum of Zig-Zag pattern is 35
+Explanation:
+The sum of zig-zag pattern is 1 + 2 + 3 + 5 + 7 + 8 + 9 = 35 and hence its prints 35 note 4 and 6 
+should not be added 
+*/
+import java.util.Scanner;
+public class Main
+{
+    
+    public static void display (int[][] arr) {
+        for(int i = 0; i<arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row= sc.nextInt();
+        int col = sc.nextInt();
+        int[][] arr = new int[row][col];
+        int sum = 0;
+        for(int i = 0 ; i < row; i++){
+            for(int j=0; j < col; j++){
+                arr[i][j] = sc.nextInt();
+                if((i==0) || (i+j==row-1) || (i==row-1)) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        System.out.println("Zig zag sum is: "+sum);
+	}
+}
+ Output:
+3
+3
+1 2 3
+4 5 6
+7 8 9
+Zig zag sum is: 35
