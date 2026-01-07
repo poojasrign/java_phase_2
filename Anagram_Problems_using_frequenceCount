@@ -14,14 +14,14 @@ public class Main
             System.out.println("Not a Anagram");
             return;
         }
-        int[] freq= new int[255];
+        int[] freq= new int[255];  // to convert this into less time capacity change 255 as 26
         for(int i = 0 ; i < s1.length(); i++){
-            int c1 = s1.charAt(i);
-            int c2 = s2.charAt(i);
+            int c1 = s1.charAt(i); // change  int c1 = s1.charAt(i); as  int c1 = s1.charAt(i)-97;
+            int c2 = s2.charAt(i); // change  int c2 = s2.charAt(i); as  int c2 = s2.charAt(i)-97;
             freq[c1]++;
             freq[c2]--;
         }
-        for(int i = 0 ; i < 255 ; i++){
+        for(int i = 0 ; i < 255 ; i++){ // change for(int i = 0 ; i < 255 ; i++) as for(int i = 0 ; i < 26 ; i++)
             if(freq[i]!=0) {
                 System.out.println("Not a anagram");
                 return;
@@ -31,8 +31,8 @@ public class Main
     }
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
-		String s1=sc.next();
-		String s2=sc.next();
+		String s1=sc.next(); // change String s1=sc.next(); as String s1=sc.next().toLowerCase();
+		String s2=sc.next();  // change String s2=sc.next(); as String s2=sc.next().toLowerCase();
 		Anagram(s1,s2);
 	}
 }
