@@ -1,0 +1,32 @@
+/*
+Change Case
+Problem:
+Convert lowercase letters to uppercase and vice versa.
+Input: "Java123"
+Output: "JAVA123"*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    String str1 = sc.next();
+	    StringBuilder sb= new StringBuilder();
+	    for(int i=0;i<str1.length();i++){
+	        char ch = str1.charAt(i);
+	        if(ch>='a'&& ch<='z'){
+	            sb.append(Character.toUpperCase(ch));
+	        }
+	        else if(ch>='A'&& ch<='Z'){
+	            sb.append(Character.toLowerCase(ch));
+	        }
+	        else{
+	            sb.append(ch);
+	        }
+	    }
+	    System.out.println(sb);
+	}
+}
+
+Output:
+Java123@
+jAVA123@
