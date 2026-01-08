@@ -1,0 +1,54 @@
+
+//     Simple recursion function in String //
+//        for Descending order //public class Main
+{
+	static void hello(int n) {
+		if(n==0)
+			return;
+		System.out.println("Hello "+n);
+		hello(n-1);
+	}
+	public static void main(String[] args) {
+		hello(10);
+	}
+}
+
+Output:
+Hello 10
+Hello 9
+Hello 8
+Hello 7
+Hello 6
+Hello 5
+Hello 4
+Hello 3
+Hello 2
+Hello 1
+
+
+//      For ascending order //
+
+import java.util.Scanner;
+public class Main
+{
+	static void hello(int s,int n) {  // s = 1 , n = 5
+	    if(s>n)
+		    return;
+	    System.out.println("Hello "+s);
+	    hello(s+1,n);
+    }
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int start = sc.nextInt();
+	int n = sc.nextInt();//5
+	hello(start,n);//hello (1,5)
+}
+}
+
+Output:
+1 5
+Hello 1
+Hello 2
+Hello 3
+Hello 4
+Hello 5
