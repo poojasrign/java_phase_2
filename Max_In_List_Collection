@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.function.Function;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		List<Integer>l1 = new ArrayList<>();
+		for(int i=0;i<n;i++){
+		    int a= sc.nextInt();
+		    l1.add(a);
+		}
+		int max=l1.get(0);
+        for(int i = 1 ; i < l1.size(); i++){
+            if(l1.get(i)>max){
+                max = l1.get(i);
+            }
+        }
+        System.out.println("maximum value "+max);
+		for(int b:l1){
+		    System.out.println(b*max+" ");
+		}
+	}
+}
+
+
+Output:
+4 5 6 7 8 9 
+maximum value 9
+36 
+45 
+54 
+63 
+72 
+81 
