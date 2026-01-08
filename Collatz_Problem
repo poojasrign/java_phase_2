@@ -1,0 +1,99 @@
+/*
+Collatz problem
+Chander started working for Bing and he wanted him to write a program to generate Collatz Sequence. 
+The rules for generating the Collatz sequence are: If n is even, n = n / 2 If n is odd, n = 3n + 1
+For example, if the starting number is 5 the sequence is: 5 -> 16 ->8-> 4 -> 2 -> 1
+It has been proved for almost all integers, that the repeated application of the above rule will result 
+in a sequence that ends in 1.
+Input Format
+The input is an integer 'n' which denotes the first term of the sequence.
+Output Format
+As output, print the numbers in the sequence and also print the number of times the rule has to
+be applied in order to reach 1.
+Sample Input:
+18*/
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+		int num=sc.nextInt();
+		int count=0;
+		while(num!=1){
+		    if(num%2==0){
+		        num=num/2;
+		    }
+		    else{
+		        num=3*num+1;
+		    }
+		    System.out.println(num+" ");
+		    count++;
+		}
+		System.out.println("total "+count);
+	}
+}
+
+Output:
+6
+3 
+10 
+5 
+16 
+8 
+4 
+2 
+1 
+total 8
+
+Explanation:
+Step-by-step execution
+
+num = 6
+
+6 is even → 6 / 2 = 3
+
+Output: 3
+count = 1
+num = 3
+3 is odd → 3 × 3 + 1 = 10
+
+Output: 10
+count = 2
+num = 10
+even → 10 / 2 = 5
+
+Output: 5
+count = 3
+num = 5
+odd → 3 × 5 + 1 = 16
+
+Output: 16
+count = 4
+num = 16
+even → 16 / 2 = 8
+
+Output: 8
+count = 5
+num = 8
+even → 8 / 2 = 4
+
+Output: 4
+count = 6
+num = 4
+even → 4 / 2 = 2
+
+Output: 2
+count = 7
+num = 2
+even → 2 / 2 = 1
+
+Output: 1
+count = 8
+Loop ends
+
+When num becomes 1, the while loop stops.
+Final output
+total 8
+
