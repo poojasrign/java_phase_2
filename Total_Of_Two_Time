@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int h1=sc.nextInt();
+	    int m1=sc.nextInt();
+	    int s1=sc.nextInt();
+	    int h2=sc.nextInt();
+	    int m2=sc.nextInt();
+	    int s2=sc.nextInt();
+	    int sec1=(s1+s2)/60;
+	    int sec2=(s1+s2)%60;
+	    int min=m1+m2+sec1;
+	    int min1=min/60;
+	    int min2=min%60;
+	    int hrs=h1+h2+min1;
+	    System.out.println("\n");
+	    System.out.println(hrs);
+	    System.out.println(min2);
+	    System.out.println(sec2);
+		
+	}
+}
+
+Output:
+12
+45
+60
+6
+30
+15
+
+
+19 hours
+16 min
+15 sec
