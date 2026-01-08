@@ -1,0 +1,23 @@
+class menu{
+    void display(int n){
+        System.out.println("number is:"+n);
+    }
+    void display(String str,float num){
+        System.out.println("Name: "+str+"\nFloat :"+num);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		menu m1=new menu();
+		m1.display(75);
+		m1.display("ABC \n",23.0f);
+	}
+}
+
+
+Output:
+number is:75
+Name: ABC 
+
+Float :23.0
