@@ -1,0 +1,24 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+		List<String>list = new ArrayList<>(Arrays.asList("Apple","Banana","Cherry"));
+		Collections.sort(list);
+		System.out.println("Sort "+list);
+		Collections.reverse(list);
+		System.out.println("Reverse "+list);
+		Collections.shuffle(list);
+		System.out.println("Shuffle "+list);
+		int freq = Collections.frequency(list, "Apple");
+        System.out.println("Frequency of Apple: " + freq);
+	}
+}
+
+Output:
+Sort [Apple, Banana, Cherry]
+Reverse [Cherry, Banana, Apple]
+Shuffle [Banana, Cherry, Apple]
+Frequency of Apple: 1
