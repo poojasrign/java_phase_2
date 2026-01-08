@@ -1,0 +1,50 @@
+class Mythread extends Thread{
+    public void run(){
+        for(int i=0;i<10;i++){
+            System.out.println("Thread is running"+Thread.currentThread().getName());
+        }
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Mythread t1 = new Mythread(); //New -> Runnable
+	    Mythread t2 = new Mythread();
+	    Mythread t3 = new Mythread();
+	    t1.start(); //Running -> Wait -> Terminated 
+	    t2.start();
+	    t3.start();
+	}
+}
+
+Output:
+Thread is runningThread-0
+Thread is runningThread-0
+Thread is runningThread-0
+Thread is runningThread-1
+Thread is runningThread-1
+Thread is runningThread-2
+Thread is runningThread-2
+Thread is runningThread-2
+Thread is runningThread-2
+Thread is runningThread-2
+Thread is runningThread-0
+Thread is runningThread-0
+Thread is runningThread-0
+Thread is runningThread-1
+Thread is runningThread-1
+Thread is runningThread-2
+Thread is runningThread-2
+Thread is runningThread-0
+Thread is runningThread-0
+Thread is runningThread-1
+Thread is runningThread-2
+Thread is runningThread-0
+Thread is runningThread-1
+Thread is runningThread-2
+Thread is runningThread-2
+Thread is runningThread-0
+Thread is runningThread-1
+Thread is runningThread-1
+Thread is runningThread-1
+Thread is runningThread-1
