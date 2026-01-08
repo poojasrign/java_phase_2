@@ -1,0 +1,29 @@
+/* Question 
+Reverse a 3-digit number
+Write a program to reverse a N-digit number.
+Input Format
+Input consists of an integer.
+Output Format
+The output will be the reverse of the input integers.
+Sample Input:
+456
+Sample Output:
+654*/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int num=sc.nextInt();
+	    int rev=0;
+	    while(num>0){
+	        rev=rev*10+num%10;
+	        num/=10;
+	    }
+		System.out.println(rev);
+	}
+}
+
+Output:
+654321
+123456
