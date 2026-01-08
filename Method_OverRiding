@@ -1,0 +1,21 @@
+class menu{
+    void display(int n){
+        System.out.println("Menu class"+n);
+    }
+}
+class rest extends menu{
+    void display(int n){
+        System.out.print("rest class:"+n);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		menu m1 = new rest();
+		m1.display(65);
+	}
+}
+
+
+output:
+rest class:65
