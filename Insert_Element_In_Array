@@ -1,0 +1,64 @@
+/*
+Sample Input:
+5size of the array
+1
+2
+3
+4
+5
+4 // index
+10 // element to insert
+Sample Output:
+Array after insertion isw
+1
+2
+3
+10
+4
+5*/
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter number of Array Input: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n+1];
+        System.out.println("Enter Array Input: ");
+        for(int i = 0 ; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Enter Index: ");
+        int index = sc.nextInt()-1;
+        System.out.println("Enter Value : ");
+        int val = sc.nextInt();
+        System.out.println("My array with extra space ");
+        for(int i = 0 ; i < n + 1 ; i++){
+            System.out.print(arr[i]+" ");
+        }
+        for(int i=n;i>= index; i--) {
+            arr[i] = arr[i-1];
+        }
+        arr[index] = val;
+        System.out.println();
+        System.out.print("Final answer: ");
+        for(int i = 0 ; i < n + 1 ; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
+Output:
+Enter number of Array Input: 
+7
+Enter Array Input: 
+1 2 3 5 6 7 8 
+Enter Index: 
+4
+Enter Value : 
+4
+My array with extra space 
+1 2 3 5 6 7 8 0 
+Final answer: 1 2 3 4 5 6 7 8
