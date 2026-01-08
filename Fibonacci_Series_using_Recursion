@@ -1,0 +1,30 @@
+/* Fibonacci Series
+Write a program to find the nth term in the Fibonacci series using recursion.
+Note that the first 2 terms in the Fibonacci Series are 0 and 1.
+Sample Input:
+5
+Sample Output:
+The term 5 in the Fibonacci series is 3
+Explanation 0
+The fibonacci series is 0, 1, 1, 2, 3, 5, 8, 13...., so the 5th term in this series is 3,
+that's why the answer will be 3.*/
+import java.util.Scanner;
+public class Main
+{
+	static int fib(int n) {
+		if(n==0)
+			return 0;
+		if(n==1)
+			return 1;
+		return fib(n-1)+fib(n-2);
+	}
+	public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			int n= sc.nextInt();
+			System.out.println(fib(n));
+	}
+}
+
+Output:
+5
+5
