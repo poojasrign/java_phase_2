@@ -1,0 +1,35 @@
+
+/*
+There is a treasure with some gold coins.
+First, the Long tribe takes a certain percentage of the total gold.
+From the remaining gold, the Black tribe takes another percentage.
+The remaining gold is then divided equally among 3 people.
+Write a program to:
+Find how many gold coins the Long tribe gets
+Find how many gold coins the Black tribe gets
+Find how many gold coins each of the 3 people gets*/import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int gold=sc.nextInt();
+	    int lon=sc.nextInt();
+	    int black=sc.nextInt();
+	    int long1=(gold/100)*lon;
+	    int gold1=gold-long1;
+	    int black1=(gold1/100)*black;
+	    int gold2=gold1-black1;
+	    int rem=gold2/3;
+	    System.out.println(long1);
+		System.out.println(black1);
+		System.out.println(rem);
+	}
+}
+
+Output:
+729
+65
+87
+455
+174
+33
