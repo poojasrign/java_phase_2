@@ -1,0 +1,47 @@
+/* 
+Same or Not
+The Modern World Cinderella was happy to meet Prince Charming at the ballroom and 
+she danced with him happily. While she was dancing, Prince wanted to check whether Cinderella is a 
+perfect match for him. He asked her a question to check her knowledge of Arrays. 
+Can you help Cinderella to write a program to find whether the two arrays are the same or not?
+Note: Two arrays are said to be the same if the sum of both arrays is the same and the size of 
+the arrays is the same.
+Input Format
+Input consists of 2 integers and 2 arrays. The integers should correspond to the size of the arrays.
+Output Format
+If two arrays are the same, display "Same" else display "Not Same"*/
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		int arr1[] = new int[n1];
+		int arr2[] = new int[n2];
+		int sum1 = 0, sum2 = 0;
+		for (int i = 0; i < n1; i++) {
+            arr1[i] = sc.nextInt();
+            sum1 += arr1[i];
+        }
+        for (int i = 0; i < n2; i++) {
+            arr2[i] = sc.nextInt();
+            sum2 += arr2[i];
+        }
+        if (sum1 == sum2) {
+            System.out.println("Same");
+        } else {
+            System.out.println("Not Same");
+        }
+	}
+}
+
+
+Output:
+3 // lenth of array1
+3 // lenth of array2
+3 4 5
+6 2 4
+Same
