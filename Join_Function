@@ -1,0 +1,30 @@
+class Mythread implements Runnable{
+    public void run(){
+        for(int i=0;i<2;i++){
+            System.out.println("Thread is running"+Thread.currentThread().getName());
+        }
+    }
+}
+public class Main
+{
+	public static void main(String[] args) throws Exception{
+		Mythread t1 = new Mythread();
+		Mythread t2 = new Mythread();
+		Mythread t3 = new Mythread();
+		Thread r1 = new Thread(t1);
+		Thread r2 = new Thread(t2);
+		Thread r3 = new Thread(t3);
+		r1.start();
+		r1.join();
+		r2.start();
+		r3.start();
+	}
+}
+
+Output:
+Thread is runningThread-0
+Thread is runningThread-0
+Thread is runningThread-1
+Thread is runningThread-1
+Thread is runningThread-2
+Thread is runningThread-2
