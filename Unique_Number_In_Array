@@ -1,0 +1,33 @@
+/*
+In a company, employees use their badges to check in and check out every day. Normally, 
+each employee's badge is scanned twice once when entering the building and once when leaving.
+However, due to a malfunction in the scanning system, exactly one employee's badge scan was missed, 
+so their badge ID appears only once in the logs while all others appear twice.
+You are given a list of badge scan records for the day. Find the ID of the employee 
+whose scan is incomplete.
+Input Format:
+First line contains an odd integer N the total number of badge scans recorded.
+The second line contains N space-separated integers representing badge IDs.*/
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int num= sc.nextInt();
+	    int arr[] = new int[num];
+	    for(int i=0;i<arr.length;i++){
+	        arr[i]=sc.nextInt();
+	    }
+	    int res=0;
+	    for(int n:arr){
+	        res^=n;
+	    }
+		System.out.println(res);
+	}
+}
+
+Output:
+1 2 4 3 1 2 3
+4
