@@ -1,0 +1,17 @@
+import java.util.Map;
+import java.util.HashMap;
+public class Main
+{
+	public static void main(String[] args) {
+		Map<Integer, String> map = new HashMap<>();
+        map.put(101, "Alice");
+        map.put(102, "Bob");
+        map.put(103, "Charlie");
+        System.out.println(map.get(102));
+        System.out.println(map);
+	}
+}
+
+Output:
+Bob
+{101=Alice, 102=Bob, 103=Charlie}
