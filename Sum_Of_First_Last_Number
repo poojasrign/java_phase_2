@@ -1,0 +1,23 @@
+/* question 
+Find the sum of fist and last value of the long number*/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int num=sc.nextInt();
+	    int last=num%10;
+	    int first=0;
+	    while(num>0){
+	        first=num%10;
+	        num/=10;
+	    }
+		System.out.println(first+last);
+	
+	}
+}
+
+
+Output:
+2345189
+11
