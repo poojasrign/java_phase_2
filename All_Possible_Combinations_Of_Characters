@@ -1,0 +1,55 @@
+/*
+1. Print all possible combinations of characters from a given string.Each combination should contain
+characters in the same order as they appear in the string. Do not include the empty combination.
+Constraints
+1 <= |S| <= 20
+Characters may be alphabets or digits
+Test Case 1
+Input
+abc
+Output
+abc
+ab
+ac
+a
+bc
+b
+C*/
+import java.util.Scanner;
+public class Main
+{
+	static void solve(String s, int i, String ans) {
+		if (i == s.length()) {
+			if (!ans.isEmpty())
+				System.out.println(ans);
+			return;
+		}
+		solve(s, i + 1 ,ans + s.charAt(i));
+		solve(s, i + 1 ,ans);
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		solve(s, 0, "");
+	}
+
+}
+
+
+Output:
+abcd
+abcd
+abc
+abd
+ab
+acd
+ac
+ad
+a
+bcd
+bc
+bd
+b
+cd
+c
+d
