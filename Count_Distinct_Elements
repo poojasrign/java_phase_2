@@ -1,0 +1,50 @@
+/*
+Count distinct elements
+Harish and Rajesh were developing a plan to find the ideal woman for Sheldon Cooper. 
+There were puzzles, translations, and questions to check a person's ntelligence. 
+One such question was to come up with a program to count the number of distinct elements in an array.
+Harini is a postdoctoral researcher and a former graduate student of Caltech 
+who is a huge fan of Sheldon's work and she wanted to impress Sheldon by
+writing a program to count the number of distinct element in an array. Can you help Harini?
+Sample Input:
+5
+1
+2
+3
+3
+4
+Sample Output:
+There are 4 distinct element in the array.
+Explanation:
+Since there are 4 distinct elements it will print There are 4 distinct element in the array.*/
+
+
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int num= sc.nextInt();
+	    int arr[]=new int[num];
+	    for(int i=0;i<arr.length;i++){
+	        arr[i]=sc.nextInt();
+	    }
+	    ArrayList<Integer> ll = new ArrayList<>();
+	    for(int x :  arr){
+            if(ll.contains(x)) {
+                continue;
+            }
+            else{
+                ll.add(x);
+            }
+	    }
+	    System.out.println(ll.size());
+	}
+}
+
+
+Output:
+7
+1 2 3 2 1 2 1
+3 // count of the Distinct Number
