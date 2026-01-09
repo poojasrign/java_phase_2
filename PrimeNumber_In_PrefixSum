@@ -1,0 +1,54 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	static boolean prime (int a) {
+		for(int i = 2 ; i <(a/2)+1; i++) {
+			if(a%i==0)
+				return false;
+		}
+		return true;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		ArrayList<Integer> prime_list = new ArrayList<>();
+		for(int i = 2 ; i <= n; i++) {
+			if(prime(i))
+				prime_list.add(i);
+		}
+		System.out.println(prime_list);
+		ArrayList<Integer> prefix_sum = new ArrayList<>();
+		if(prime_list.size()>=2) {
+			prefix_sum.add(prime_list.get(0)+prime_list.get(1));
+			for(int i = 2 ; i< prime_list.size(); i++) {
+				prefix_sum.add(prefix_sum.get(i-2)+prime_list.get(i));
+			}
+			System.out.println(prefix_sum);
+			int c = 0;
+			for(int x: prefix_sum) {
+				if(x > n)
+					break;
+				if(prime(x) && x <= n)
+					c++;
+			}
+			System.out.println(c);
+		}
+		else {
+			System.out.println(0);
+		}
+	}
+}
+
+Output:
+20 //given number
+[2, 3, 5, 7, 11, 13, 17, 19] // number between 2 to 20 given number
+[5, 10, 17, 28, 41, 58, 77] // Prifx sum for the above array
+2 // only two in the prifx sum is in the given number 20 (5,10)
