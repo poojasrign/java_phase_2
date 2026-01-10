@@ -1,0 +1,26 @@
+/*
+String Rotation
+Check if one string is a rotation of another.
+Example:
+Input:
+s1 = "abcd"
+s2 = "cdab"
+Output: true*/
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String str1= sc.nextLine();
+		String str2=sc.nextLine();
+		String str=str1+str2;
+		System.out.println(str.contains(str2));
+	}
+}
+
+Output:
+abcd
+cdab
+true
