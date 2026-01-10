@@ -1,0 +1,64 @@
+/*
+Longest Word in a Sentence
+Find the longest word in a given sentence.
+Example:
+Input: "Java is very powerful"
+Output: "powerful"
+Pressotel beta fisting
+Step 1: String Input -> nextLine()
+Step 2: Convert the String into String Array using split() function
+Step 3: Create a ans String empty
+Step 4: Iterate using for loop -> String Array
+Step 5: Set the condition whether your ans string length is
+lesser than string word length() if true
+assign ans to that word
+Step 6: After for loop print your ans*/
+
+                      // Using Built-in Function //
+/*import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String str= sc.nextLine();
+		String arr[]=str.split(" ");
+		String ans=" ";
+		for(String word:arr){
+		    if(word.length()>ans.length()){
+		        ans=word;
+		    }
+		}
+		System.out.println(ans);
+	}
+}*/
+
+
+                      // Without Built-in Function //
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String str= sc.nextLine();
+		StringBuilder word = new StringBuilder(); 
+		StringBuilder ans = new StringBuilder();
+		for(int i = 0; i < str.length(); i++){
+			if(str.charAt(i)!=' ') {
+				word.append(str.charAt(i));
+			}else {
+				if(word.length()>ans.length()) {
+					ans = word;
+				}
+				else {
+					word.setLength(0);
+					
+				}
+			}
+        }
+        System.out.print(word);
+	}
+}
+
+Output:
+java is very powerful
+powerful
