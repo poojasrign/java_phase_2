@@ -1,0 +1,33 @@
+/*
+Compress the String
+Perform basic string compression using counts.
+Example:
+Input: "aaabbc"
+Output: "a3b2c1"*/
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		String str = sc.nextLine();
+		StringBuilder ans = new StringBuilder();
+		int count=1;
+		for(int i=0;i<str.length();i++){
+		    if(i<str.length()-1 && str.charAt(i)==str.charAt(i+1)){
+		        count++;
+		    }
+		    else{
+		        ans.append(str.charAt(i)).append(count);
+		        count=1;
+		    }
+		}
+        System.out.println(ans);
+	}
+}
+
+
+Output:
+aabbgg
+a2b2g2
